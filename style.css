@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe0f0, #fff7d1);
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  color: #d63384;
+}
+header .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header button {
+  background: #ff4da6;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+header button:hover {
+  transform: scale(1.05);
+}
+
+/* Balões */
+.balloon {
+  position: absolute;
+  border-radius: 50%;
+  animation: bounce 3s infinite;
+}
+.balloon-pink {
+  width: 60px;
+  height: 80px;
+  background: #f472b6;
+  left: -20px;
+  top: -10px;
+}
+.balloon-blue {
+  width: 50px;
+  height: 70px;
+  background: #60a5fa;
+  right: -20px;
+  top: -10px;
+  animation-duration: 4s;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Card */
+.card-section {
+  text-align: center;
+  padding: 20px;
+}
+.card {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 15px;
+  background: white;
+  overflow: hidden;
+  transition: height 0.7s;
+  position: relative;
+}
+.card.closed {
+  height: 150px;
+}
+.card.opened {
+  height: 300px;
+}
+.card .front, .card .back {
+  padding: 20px;
+}
+.card .back {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  background: white;
+  transition: opacity 0.7s;
+}
+.card.opened .front {
+  opacity: 0;
+}
+.card.opened .back {
+  opacity: 1;
+}
+.card .buttons a {
+  margin-right: 10px;
+  background: #ff4da6;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* Fotos */
+#photos {
+  padding: 20px;
+}
+#photos h3 {
+  color: #d63384;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.photo-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Mensagens */
+#messages {
+  padding: 20px;
+}
+#messages form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#messages input, #messages textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#messages button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+#messages button[type=submit] {
+  background: #ff4da6;
+  color: white;
+}
+#messages button#shareBtn {
+  background: #eee;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* Confetes flutuantes */
+#floatingConfetti div {
+  position: absolute;
+  border-radius: 50%;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh); opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
