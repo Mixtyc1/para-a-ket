@@ -25,11 +25,6 @@ header {
 header h1 {
   color: #d63384;
 }
-header .actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 header button {
   background: #ff4da6;
   color: white;
@@ -107,7 +102,6 @@ header button:hover {
   opacity: 1;
 }
 .card .buttons a {
-  margin-right: 10px;
   background: #ff4da6;
   color: white;
   padding: 5px 12px;
@@ -134,34 +128,6 @@ header button:hover {
   border-radius: 10px;
 }
 
-/* Mensagens */
-#messages {
-  padding: 20px;
-}
-#messages form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#messages input, #messages textarea {
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-#messages button {
-  padding: 8px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-#messages button[type=submit] {
-  background: #ff4da6;
-  color: white;
-}
-#messages button#shareBtn {
-  background: #eee;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -179,4 +145,3 @@ footer {
   0% { transform: translateY(-10vh); opacity: 1; }
   100% { transform: translateY(110vh); opacity: 0; }
 }
-
