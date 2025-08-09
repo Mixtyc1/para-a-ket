@@ -5,15 +5,6 @@ document.getElementById("openCard").addEventListener("click", () => {
   launchConfetti();
 });
 
-document.getElementById("messageForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Mensagem enviada! (placeholder)");
-});
-
-document.getElementById("shareBtn").addEventListener("click", () => {
-  alert("Opção de compartilhar será implementada se você pedir :)");
-});
-
 /* Confete do cartão */
 function launchConfetti() {
   const canvas = document.getElementById("confettiCanvas");
@@ -72,3 +63,5 @@ for (let i = 0; i < 15; i++) {
   confetti.style.animationDelay = Math.random() * 5 + "s";
   floatingConfetti.appendChild(confetti);
 }
+
+
